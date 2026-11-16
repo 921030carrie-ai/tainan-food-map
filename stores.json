@@ -1,0 +1,88 @@
+[
+  {
+    "id": "tn-001",
+    "name": "阿明豬心冬粉",
+    "district": "中西區",
+    "address": "台南市中西區保安路72號",
+    "coords": {
+      "lat": 22.990456,
+      "lng": 120.196512
+    },
+    "googleMapsUrl": "https://maps.google.com/?q=22.990456,120.196512",
+    "coverImage": "",
+    "gallery": [],
+    "category": "傳統小吃",
+    "tags": [
+      "宵夜",
+      "排隊名店",
+      "在地人推薦",
+      "豬心"
+    ],
+    "recommendedDishes": [
+      "豬心冬粉",
+      "蒜頭豬腳",
+      "鴨腳翅"
+    ],
+    "priceRange": "$$",
+    "rating": 4.5,
+    "review": "湯頭清甜帶有淡淡中藥與薑絲香氣，豬心川燙熟度精準、口感脆嫩完全無腥味。建議開店前先來排隊，軟爛入味的蒜頭豬腳也必點。",
+    "createdAt": "2026-11-16"
+  },
+  {
+    "id": "tn-002",
+    "name": "文章牛肉湯 安平總店",
+    "district": "安平區",
+    "address": "台南市安平區安平路300號",
+    "coords": {
+      "lat": 22.998518,
+      "lng": 120.168324
+    },
+    "googleMapsUrl": "https://maps.google.com/?q=22.998518,120.168324",
+    "coverImage": "",
+    "gallery": [],
+    "category": "傳統小吃",
+    "tags": [
+      "早餐",
+      "宵夜",
+      "溫體牛",
+      "冷氣開放"
+    ],
+    "recommendedDishes": [
+      "招牌牛肉湯",
+      "牛肉燥飯",
+      "芥藍炒牛肉"
+    ],
+    "priceRange": "$$",
+    "rating": 4.5,
+    "review": "現切溫體牛淋上牛骨與蔬果熬煮的高湯，肉質粉嫩鮮甜。點湯附贈的牛肉燥飯香氣十足，搭配薑絲與醬油膏就是最道地的台南早餐。",
+    "createdAt": "2026-11-16"
+  },
+  {
+    "id": "tn-003",
+    "name": "霜花亭公園店",
+    "district": "北區",
+    "address": "台南市北區公園路113號",
+    "coords": {
+      "lat": 22.996342,
+      "lng": 120.205915
+    },
+    "googleMapsUrl": "https://maps.google.com/?q=22.996342,120.205915",
+    "coverImage": "",
+    "gallery": [],
+    "category": "咖啡下午茶",
+    "tags": [
+      "下午茶",
+      "老宅改造",
+      "適合聚餐",
+      "冷氣開放"
+    ],
+    "recommendedDishes": [
+      "現烤舒芙蕾厚鬆餅",
+      "靜岡抹茶歐蕾"
+    ],
+    "priceRange": "$$$",
+    "rating": 4.0,
+    "review": "現點現做的厚鬆餅空氣感十足，入口綿密濕潤且蛋香濃郁，搭配微苦回甘的抹茶淋醬甜而不膩，適合午後與朋友悠閒小憩。",
+    "createdAt": "2026-11-16"
+  }
+]

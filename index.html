@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>台南美食地圖｜在地口袋名單探索</title>
+  <meta name="description" content="探索台南各行政區在地美食、傳統小吃、老宅咖啡與隱藏版口袋名單。" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🍜</text></svg>" />
+
+  <!-- Leaflet.js CSS (免 API Key 開源地圖) -->
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+    crossorigin=""
+  />
+
+  <!-- 專案主樣式表 (相對路徑) -->
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <div class="app-container">
+    <!-- 左側（桌面版）／主視圖（手機版）：篩選器與店家列表 -->
+    <aside class="sidebar" id="sidebar">
+      <header class="app-header">
+        <div class="app-header__title-group">
+          <h1 class="app-header__title">台南美食地圖</h1>
+          <span class="app-header__badge" id="store-count">載入中...</span>
+        </div>
+        <p class="app-header__subtitle">探索府城巷弄小吃、老宅咖啡與私房口袋名單</p>
+
+        <!-- 搜尋框 -->
+        <div class="search-box">
+          <input
+            type="search"
+            id="search-input"
+            class="search-box__input"
+            placeholder="搜尋店名、推薦餐點（如：牛肉湯、豬心）或標籤..."
+            aria-label="搜尋店家或餐點"
+          />
+        </div>
+
+        <!-- 篩選控制列 -->
+        <div class="filter-controls">
+          <select id="district-filter" class="filter-select" aria-label="選擇行政區">
+            <option value="all">全部行政區</option>
+          </select>
+
+          <select id="price-filter" class="filter-select" aria-label="選擇價格區間">
+            <option value="all">全部價位</option>
+            <option value="$">$ (NT$100以下)</option>
+            <option value="$$">$$ (NT$100~300)</option>
+            <option value="$$$">$$$ (NT$300~800)</option>
+            <option value="$$$$">$$$$ (NT$800以上)</option>
+          </select>
+
+          <button type="button" id="reset-filters-btn" class="btn-reset" title="重設所有篩選條件">
+            重設
+          </button>
+        </div>
+
+        <!-- 美食分類膠囊橫向滑動列 -->
+        <div class="category-chips" id="category-chips" role="tablist" aria-label="美食主分類">
+          <button type="button" class="chip chip--active" data-category="all">全部美食</button>
+          <button type="button" class="chip" data-category="傳統小吃">傳統小吃</button>
+          <button type="button" class="chip" data-category="飯麵主食">飯麵主食</button>
+          <button type="button" class="chip" data-category="火鍋燒肉">火鍋燒肉</button>
+          <button type="button" class="chip" data-category="甜點冰品">甜點冰品</button>
+          <button type="button" class="chip" data-category="咖啡下午茶">咖啡下午茶</button>
+          <button type="button" class="chip" data-category="早午餐輕食">早午餐輕食</button>
+          <button type="button" class="chip" data-category="宵夜炸物">宵夜炸物</button>
+          <button type="button" class="chip" data-category="手搖飲品">手搖飲品</button>
+        </div>
+      </header>
+
+      <!-- 店家卡片列表容器 -->
+      <main class="store-list" id="store-list" aria-live="polite">
+        <!-- 由 js/app.js 動態渲染卡片 -->
+      </main>
+    </aside>
+
+    <!-- 右側（桌面版）／切換視圖（手機版）：互動地圖 -->
+    <section class="map-section" id="map-section" aria-label="台南美食互動地圖">
+      <div id="map" class="map-canvas"></div>
+    </section>
+
+    <!-- 手機版專用：地圖 / 列表切換懸浮按鈕 -->
+    <button type="button" id="mobile-view-toggle" class="mobile-toggle-btn" aria-label="切換地圖與列表檢視">
+      🗺️ 切換地圖模式
+    </button>
+  </div>
+
+  <!-- Leaflet.js JS -->
+  <script
+    src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+    integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+    crossorigin=""
+  ></script>
+
+  <!-- 專案主邏輯 (相對路徑) -->
+  <script src="./js/app.js"></script>
+</body>
+</html>
